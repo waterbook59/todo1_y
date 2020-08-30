@@ -1,5 +1,6 @@
 import 'package:provider/provider.dart';
 import 'package:provider/single_child_widget.dart';
+import 'package:todo1y/models/db/dao.dart';
 import 'package:todo1y/models/db/database.dart';
 import 'package:todo1y/models/repository/task_repository.dart';
 import 'package:todo1y/view_models/task_viewmodel.dart';
@@ -13,15 +14,16 @@ List<SingleChildWidget> globalProviders = [
 List<SingleChildWidget> independentModels =[
   Provider<MyDatabase>(
     create: (_)=>MyDatabase(),
+    dispose: (_,db) =>db.close(),
   ),
 ];
 
 
 List dependentModels = [
-  ProxyProvider<MyDatabase,WordsDao>(
-    update: (_, db, dao)=>WordsDao(db),
+  ProxyProvider<MyDatabase,TasksDao>(
+    update: (_, db, dao)=>TasksDao(db),
   ),
-  ProxyProvider<WordsDao,TaskRepository>(
+  ProxyProvider<TasksDao,TaskRepository>(
     update: (_, dao, repository)=>TaskRepository(dao: dao),
   ),
 ];
