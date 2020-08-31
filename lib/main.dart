@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:todo1y/style.dart';
 import 'package:todo1y/view/screens/task_list_screen.dart';
 
 import 'di/providers.dart';
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         brightness:Brightness.light,
         primaryColor: Colors.purpleAccent,
+        fontFamily: RegularFont,
       ),
       darkTheme: ThemeData(
         brightness: Brightness.dark,
@@ -30,6 +32,7 @@ class MyApp extends StatelessWidget {
         iconTheme: IconThemeData(
           color: Colors.white,//bodyで使うCardとかのボタンのデフォルト色
         ),
+        fontFamily: RegularFont,
       ),
       home: TaskListScreen(),
     );
