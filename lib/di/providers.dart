@@ -19,7 +19,7 @@ List<SingleChildWidget> independentModels =[
 ];
 
 
-List dependentModels = [
+List<SingleChildWidget> dependentModels = [
   ProxyProvider<MyDatabase,TasksDao>(
     update: (_, db, dao)=>TasksDao(db),
   ),
@@ -29,7 +29,7 @@ List dependentModels = [
 ];
 
 //chapter98 RepositoryにChangeNotifierProxyProvider
-List viewModels =[
+List<SingleChildWidget> viewModels =[
   ChangeNotifierProvider<TaskViewModel>(
     create: (context)=> TaskViewModel(
       repository:Provider.of<TaskRepository>(context, listen: false),

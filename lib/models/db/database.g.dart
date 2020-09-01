@@ -144,7 +144,7 @@ class $TaskRecordsTable extends TaskRecords
   GeneratedBoolColumn get isTodDO => _isTodDO ??= _constructIsTodDO();
   GeneratedBoolColumn _constructIsTodDO() {
     return GeneratedBoolColumn('is_tod_d_o', $tableName, false,
-        defaultValue: Constant(false));
+        defaultValue: const Constant(false));
   }
 
   @override

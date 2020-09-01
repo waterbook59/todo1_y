@@ -5,27 +5,31 @@ import '../../style.dart';
 import 'add_task_screen.dart';
 
 class TaskListScreen extends StatelessWidget {
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Task List",style: AppBarTextStyle,),
+        title: const Text(
+          'Task List',
+          style: appBarTextStyle,
+        ),
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.add_circle_outline),
-            tooltip: "新たに追加",
-            onPressed: () => _addTodo(context,EditType.add),
+            tooltip: '新たに追加',
+            onPressed: () => _addTodo(context, EditType.add),
           ),
         ],
       ),
     );
   }
 
-  _addTodo(BuildContext context, EditType add) {
-    Navigator.push(context, MaterialPageRoute(builder: (_)=>AddTaskScreen(editType: EditType.add,)));
+  void _addTodo(BuildContext context, EditType add) {
+    Navigator.push(
+        context,
+        MaterialPageRoute<void>(
+            builder: (context) => const AddTaskScreen(
+                  editType:  EditType.add,
+                )));
   }
-
-
 }

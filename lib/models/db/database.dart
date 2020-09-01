@@ -14,7 +14,7 @@ part 'database.g.dart';
 class TaskRecords extends Table{
   TextColumn get title =>text()();
   TextColumn get memo =>text()();
-  BoolColumn get isTodDO =>boolean().withDefault(Constant(false))();
+  BoolColumn get isTodDO =>boolean().withDefault(const Constant(false))();
 
   @override
   Set<Column> get primaryKey => {title};

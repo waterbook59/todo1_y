@@ -3,16 +3,17 @@ import 'package:todo1y/style.dart';
 import 'package:todo1y/util/constants.dart';
 
 class AddTaskScreen extends StatelessWidget {
+  const AddTaskScreen({this.editType});
   final EditType editType;
-  AddTaskScreen({this.editType});
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Add Task",style: AppBarTextStyle),
+        title: const Text('Add Task',style: appBarTextStyle),
       ),
-      body: Text("AddTask"),
+      body: const Text('AddTask'),
     );
   }
 }

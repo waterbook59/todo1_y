@@ -16,12 +16,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "todo_1st",
+      title: 'todo_1st',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         brightness:Brightness.light,
         primaryColor: Colors.purpleAccent,
-        fontFamily: RegularFont,
+        fontFamily: regularFont,
       ),
       darkTheme: ThemeData(
         brightness: Brightness.dark,
@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
         iconTheme: IconThemeData(
           color: Colors.white,//bodyで使うCardとかのボタンのデフォルト色
         ),
-        fontFamily: RegularFont,
+        fontFamily: regularFont,
       ),
       home: TaskListScreen(),
     );

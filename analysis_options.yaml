@@ -1,0 +1,9 @@
+# https://pub.dev/packages/pedantic_mono
+include: package:pedantic_mono/analysis_options.yaml
+
+linter:
+  rules:
+    - sized_box_for_whitespace
+    - use_is_even_rather_than_modulo
+    - no_default_cases
+    - exhaustive_cases

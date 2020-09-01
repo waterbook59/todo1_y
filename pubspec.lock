@@ -228,6 +228,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.14.0+3"
+  http:
+    dependency: transitive
+    description:
+      name: http
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.12.2"
   http_multi_server:
     dependency: transitive
     description:
@@ -277,6 +284,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "3.0.1"
+  linter:
+    dependency: "direct main"
+    description:
+      name: linter
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.1.118"
   logging:
     dependency: transitive
     description:
@@ -396,6 +410,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.9.0"
+  pedantic_mono:
+    dependency: "direct main"
+    description:
+      name: pedantic_mono
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.10.0+2"
   petitparser:
     dependency: transitive
     description:
